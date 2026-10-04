@@ -48,30 +48,20 @@ export default function RegisterPage() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold text-slate-100 text-center mb-2">
-        Buat Akun Baru
-      </h1>
+      <h1 className="text-2xl font-bold text-slate-100 text-center mb-2">Buat Akun Baru</h1>
       <p className="text-sm text-slate-400 text-center mb-6">
         Bergabunglah bersama komunitas DelcomFeed
       </p>
 
       {errorMessage && (
-        <div
-          role="alert"
-          className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-300 text-sm text-center"
-        >
+        <div role="alert" className="mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-300 text-sm text-center">
           {errorMessage}
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label
-            htmlFor="reg-name"
-            className="block text-sm font-medium text-slate-300 mb-1"
-          >
-            Nama Lengkap
-          </label>
+          <label htmlFor="reg-name" className="block text-sm font-medium text-slate-300 mb-1">Nama Lengkap</label>
           <input
             id="reg-name"
             name="name"
@@ -81,17 +71,12 @@ export default function RegisterPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/40 text-sm"
-            placeholder="Dian Rafael Tambunan"
+            placeholder="Dimas Sidabutar"
           />
         </div>
 
         <div>
-          <label
-            htmlFor="reg-username"
-            className="block text-sm font-medium text-slate-300 mb-1"
-          >
-            Username
-          </label>
+          <label htmlFor="reg-username" className="block text-sm font-medium text-slate-300 mb-1">Username</label>
           <input
             id="reg-username"
             name="username"
@@ -101,17 +86,12 @@ export default function RegisterPage() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/40 text-sm"
-            placeholder="dian123"
+            placeholder="dimas123"
           />
         </div>
 
         <div>
-          <label
-            htmlFor="reg-email"
-            className="block text-sm font-medium text-slate-300 mb-1"
-          >
-            Email
-          </label>
+          <label htmlFor="reg-email" className="block text-sm font-medium text-slate-300 mb-1">Email</label>
           <input
             id="reg-email"
             name="email"
@@ -126,12 +106,7 @@ export default function RegisterPage() {
         </div>
 
         <div>
-          <label
-            htmlFor="reg-password"
-            className="block text-sm font-medium text-slate-300 mb-1"
-          >
-            Kata Sandi
-          </label>
+          <label htmlFor="reg-password" className="block text-sm font-medium text-slate-300 mb-1">Kata Sandi</label>
           <input
             id="reg-password"
             name="password"
