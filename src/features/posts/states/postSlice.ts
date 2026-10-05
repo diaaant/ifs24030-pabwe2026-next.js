@@ -116,9 +116,7 @@ const postSlice = createSlice({
         state.isLoading = false;
         state.error = (action.payload as string) || "Postingan tidak ditemukan";
       })
-      .addCase(createPost.fulfilled, (state, action) => {
-        state.posts.unshift(action.payload);
-      })
+      .addCase(createPost.fulfilled, () => {})
       .addCase(updatePost.fulfilled, (state, action) => {
         const index = state.posts.findIndex((p) => p.id === action.payload.id);
         if (index !== -1) {

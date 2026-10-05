@@ -6,12 +6,12 @@ export const postApi = {
   create: (data: { title: string; content: string }) =>
     fetchApi("/posts", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify({ description: data.content }),
     }),
   update: (id: string | number, data: { title: string; content: string }) =>
     fetchApi(`/posts/${id}`, {
       method: "PUT",
-      body: JSON.stringify(data),
+      body: JSON.stringify({ description: data.content }),
     }),
   delete: (id: string | number) =>
     fetchApi(`/posts/${id}`, {
