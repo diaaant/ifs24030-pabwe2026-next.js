@@ -9,6 +9,19 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: [],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json", "html", "lcov"],
+      reportsDirectory: "./coverage",
+      exclude: [
+        "node_modules/**",
+        "**/*.config.*",
+        "**/*.d.ts",
+        "src/__tests__/**",
+        ".next/**",
+        "coverage/**"
+      ]
+    }
   },
   resolve: {
     alias: {
